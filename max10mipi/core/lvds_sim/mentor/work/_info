@@ -1,0 +1,90 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/htti/Downloads/ip_altlvds/simulation/modelsim
+vlvds
+Z0 !s110 1503046060
+!i10b 1
+!s100 ;G3X6=86M^dU9Y]UYITk:2
+IWW<E9cWB`ok2gdfL=69mT2
+Z1 V`JN@9S9cnhjKRR_L]QIcM3
+Z2 dE:/decatest/test/mymipi/core/lvds_sim/mentor
+w1502781574
+8E:/decatest/test/mymipi/core/lvds.v
+FE:/decatest/test/mymipi/core/lvds.v
+L0 8
+Z3 OV;L;10.3d;59
+r1
+!s85 0
+31
+!s108 1503046060.258000
+!s107 E:/decatest/test/mymipi/core/lvds.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/decatest/test/mymipi/core/lvds.v|
+!i113 1
+Z4 o-work work
+vlvds_0002
+R0
+!i10b 1
+!s100 mznZnIAVl@_IUDLVYX9SG0
+I7PS<NozQ;ni2VFhYR389i2
+R1
+R2
+Z5 w1502781544
+Z6 8E:/decatest/test/mymipi/core/lvds/lvds_0002.v
+Z7 FE:/decatest/test/mymipi/core/lvds/lvds_0002.v
+L0 79
+R3
+r1
+!s85 0
+31
+Z8 !s108 1503046060.477000
+Z9 !s107 E:/decatest/test/mymipi/core/lvds/lvds_0002.v|
+Z10 !s90 -reportprogress|300|-work|work|-stats=none|E:/decatest/test/mymipi/core/lvds/lvds_0002.v|
+!i113 1
+R4
+vlvds_0002_lvds_ddio_in_7td
+R0
+!i10b 1
+!s100 BR=n?`Ua]GMBfJhm;LEkH3
+IE;YUOgAm:FJ@<Ob7Jn`g:2
+R1
+R2
+R5
+R6
+R7
+L0 34
+R3
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R4
+vlvds_top
+R0
+!i10b 1
+!s100 NiQniR4><No]b`4gPHhgW2
+I3<hUJcOJ4GlDD:8I:?79<1
+R1
+R2
+w1503046058
+8E:/decatest/test/mymipi/core/lvds_sim/mentor/lvds_top.v
+FE:/decatest/test/mymipi/core/lvds_sim/mentor/lvds_top.v
+L0 2
+R3
+r1
+!s85 0
+31
+!s108 1503046060.341000
+!s107 E:/decatest/test/mymipi/core/lvds_sim/mentor/lvds_top.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/decatest/test/mymipi/core/lvds_sim/mentor/lvds_top.v|
+!i113 1
+R4

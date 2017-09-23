@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file path="lvds_sim/lvds.v" type="VERILOG" />
+ <topLevel name="lvds" />
+ <deviceFamily name="max10" />
+</simPackage>

@@ -1,0 +1,23 @@
+E:/decatest/test/mymipi/core/lvds_sim/mentor/lvds_top.v {1 {vlog -work work -stats=none E:/decatest/test/mymipi/core/lvds_sim/mentor/lvds_top.v
+Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+-- Compiling module lvds_top
+
+Top level modules:
+	lvds_top
+
+} {} {}} E:/decatest/test/mymipi/core/lvds.v {1 {vlog -work work -stats=none E:/decatest/test/mymipi/core/lvds.v
+Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+-- Compiling module lvds
+
+Top level modules:
+	lvds
+
+} {} {}} E:/decatest/test/mymipi/core/lvds/lvds_0002.v {1 {vlog -work work -stats=none E:/decatest/test/mymipi/core/lvds/lvds_0002.v
+Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+-- Compiling module lvds_0002_lvds_ddio_in_7td
+-- Compiling module lvds_0002
+
+Top level modules:
+	lvds_0002
+
+} {} {}}

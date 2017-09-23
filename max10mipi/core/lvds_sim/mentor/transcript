@@ -1,0 +1,437 @@
+# Compile of lvds.v was successful.
+# Compile of lvds.v was successful.
+# Compile of lvds_top.v failed with 1 errors.
+# 3 compiles, 1 failed with 1 error.
+# Compile of lvds.v was successful.
+# Compile of lvds.v was successful.
+# Compile of lvds_top.v failed with 1 errors.
+# 3 compiles, 1 failed with 1 error.
+# Compile of lvds.v was successful.
+# Compile of lvds.v was successful.
+# Compile of lvds_top.v was successful with warnings.
+# 3 compiles, 0 failed with no errors.
+# Load canceled
+# Compile of lvds.v was successful.
+# Compile of lvds.v was successful.
+# Compile of lvds_top.v was successful with warnings.
+# 3 compiles, 0 failed with no errors.
+vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps lvds_top
+# vsim 
+# Start time: 12:07:49 on Aug 18,2017
+# Loading work.lvds_top
+# ** Error: (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# 
+# No such file or directory. (errno = ENOENT)
+# Loading work.lvds
+# ** Error: (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-3033) E:/decatest/test/mymipi/core/lvds.v(16): Instantiation of 'lvds_0002' failed. The design unit was not found.
+# 
+#         Region: /lvds_top/lvds_inst
+#         Searched libraries:
+#             D:/altera15/modelsim_ae/altera/verilog/altera
+#             D:/altera15/modelsim_ae/altera/verilog/220model
+#             D:/altera15/modelsim_ae/altera/verilog/sgate
+#             D:/altera15/modelsim_ae/altera/verilog/altera_mf
+#             D:/altera15/modelsim_ae/altera/verilog/altera_lnsim
+#             D:/altera15/modelsim_ae/altera/verilog/cycloneive
+# ** Error: (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# 
+# No such file or directory. (errno = ENOENT)
+#             E:/decatest/test/mymipi/core/lvds_sim/mentor/work
+#             E:/decatest/test/mymipi/core/lvds_sim/mentor/work
+# Error loading design
+vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps lvds_top
+# vsim 
+# Start time: 12:09:16 on Aug 18,2017
+# Loading work.lvds_top
+# ** Error: (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# 
+# No such file or directory. (errno = ENOENT)
+# Loading work.lvds
+# ** Error: (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-3033) E:/decatest/test/mymipi/core/lvds.v(16): Instantiation of 'lvds_0002' failed. The design unit was not found.
+# 
+#         Region: /lvds_top/lvds_inst
+#         Searched libraries:
+#             D:/altera15/modelsim_ae/altera/verilog/altera
+#             D:/altera15/modelsim_ae/altera/verilog/220model
+#             D:/altera15/modelsim_ae/altera/verilog/sgate
+#             D:/altera15/modelsim_ae/altera/verilog/altera_mf
+#             D:/altera15/modelsim_ae/altera/verilog/altera_lnsim
+#             D:/altera15/modelsim_ae/altera/verilog/cycloneive
+# ** Error: (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# 
+# No such file or directory. (errno = ENOENT)
+#             E:/decatest/test/mymipi/core/lvds_sim/mentor/work
+#             E:/decatest/test/mymipi/core/lvds_sim/mentor/work
+# Error loading design
+vmap -del work
+# Model Technology ModelSim PE vmap 10.3d Lib Mapping Utility 2014.10 Oct  7 2014
+# vmap -modelsim_quiet -del work 
+# Removing reference to logical library work
+# Modifying E:/decatest/test/mymipi/core/lvds_sim/mentor/lvds_sim.mpf
+# Compile of lvds.v was successful.
+# Compile of lvds_top.v was successful with warnings.
+# 2 compiles, 0 failed with no errors.
+vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps work.lvds_top
+# vsim 
+# Start time: 15:29:31 on Aug 18,2017
+# Loading work.lvds_top
+# ** Error: (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# 
+# No such file or directory. (errno = ENOENT)
+# Loading work.lvds
+# ** Error: (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-3033) E:/decatest/test/mymipi/core/lvds.v(16): Instantiation of 'lvds_0002' failed. The design unit was not found.
+# 
+#         Region: /lvds_top/lvds_inst
+#         Searched libraries:
+#             D:/altera15/modelsim_ae/altera/verilog/altera
+#             D:/altera15/modelsim_ae/altera/verilog/220model
+#             D:/altera15/modelsim_ae/altera/verilog/sgate
+#             D:/altera15/modelsim_ae/altera/verilog/altera_mf
+#             D:/altera15/modelsim_ae/altera/verilog/altera_lnsim
+#             D:/altera15/modelsim_ae/altera/verilog/cycloneive
+# ** Error: (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# 
+# No such file or directory. (errno = ENOENT)
+#             E:/decatest/test/mymipi/core/lvds_sim/mentor/work
+#             E:/decatest/test/mymipi/core/lvds_sim/mentor/work
+# Error loading design
+# Compile of lvds.v was successful.
+# Compile of lvds_top.v was successful with warnings.
+# 2 compiles, 0 failed with no errors.
+vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps work.lvds_top
+# vsim 
+# Start time: 15:35:27 on Aug 18,2017
+# Loading work.lvds_top
+# ** Error: (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# 
+# No such file or directory. (errno = ENOENT)
+# Loading work.lvds
+# ** Error: (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-3033) E:/decatest/test/mymipi/core/lvds.v(16): Instantiation of 'lvds_0002' failed. The design unit was not found.
+# 
+#         Region: /lvds_top/lvds_inst
+#         Searched libraries:
+#             D:/altera15/modelsim_ae/altera/verilog/altera
+#             D:/altera15/modelsim_ae/altera/verilog/220model
+#             D:/altera15/modelsim_ae/altera/verilog/sgate
+#             D:/altera15/modelsim_ae/altera/verilog/altera_mf
+#             D:/altera15/modelsim_ae/altera/verilog/altera_lnsim
+#             D:/altera15/modelsim_ae/altera/verilog/cycloneive
+# ** Error: (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# 
+# No such file or directory. (errno = ENOENT)
+#             E:/decatest/test/mymipi/core/lvds_sim/mentor/work
+#             E:/decatest/test/mymipi/core/lvds_sim/mentor/work
+# Error loading design
+# Compile of lvds.v was successful.
+# Compile of lvds_top.v was successful with warnings.
+# Compile of lvds_0002.v was successful.
+# 3 compiles, 0 failed with no errors.
+vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps work.lvds_top
+# vsim 
+# Start time: 15:57:11 on Aug 18,2017
+# Loading work.lvds_top
+# ** Error: (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# 
+# No such file or directory. (errno = ENOENT)
+# Loading work.lvds
+# ** Error: (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# 
+# No such file or directory. (errno = ENOENT)
+# Loading work.lvds_0002
+# ** Error: (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# 
+# No such file or directory. (errno = ENOENT)
+# Loading work.lvds_0002_lvds_ddio_in_7td
+# Load canceled
+# Compile of lvds.v was successful.
+# Compile of lvds_top.v was successful with warnings.
+# Compile of lvds_0002.v was successful.
+# 3 compiles, 0 failed with no errors.
+vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps work.lvds_top
+# vsim 
+# Start time: 16:03:39 on Aug 18,2017
+# Loading work.lvds_top
+# ** Error: (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# 
+# No such file or directory. (errno = ENOENT)
+# Loading work.lvds
+# ** Error: (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# 
+# No such file or directory. (errno = ENOENT)
+# Loading work.lvds_0002
+# ** Error: (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# 
+# No such file or directory. (errno = ENOENT)
+# Loading work.lvds_0002_lvds_ddio_in_7td
+add wave -position insertpoint  \
+sim:/lvds_top/clk \
+sim:/lvds_top/rstn \
+sim:/lvds_top/data \
+sim:/lvds_top/data_w \
+sim:/lvds_top/data_d
+run
+restart
+# ** Error: (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# 
+# No such file or directory. (errno = ENOENT)
+run
+# Compile of lvds.v was successful.
+# Compile of lvds_top.v was successful with warnings.
+# Compile of lvds_0002.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.lvds_top
+# ** Error: (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# 
+# No such file or directory. (errno = ENOENT)
+# Loading work.lvds
+# ** Error: (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# 
+# No such file or directory. (errno = ENOENT)
+# Loading work.lvds_0002
+# ** Error: (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# 
+# No such file or directory. (errno = ENOENT)
+# Loading work.lvds_0002_lvds_ddio_in_7td
+run
+# GetModuleFileName: 找不到指定的模块。
+# 
+# 
+# Compile of lvds.v was successful.
+# Compile of lvds_top.v was successful.
+# Compile of lvds_0002.v was successful.
+# 3 compiles, 0 failed with no errors.
+vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps work.lvds_top
+# vsim 
+# Start time: 16:08:15 on Aug 18,2017
+# Loading work.lvds_top
+# ** Error: (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# 
+# No such file or directory. (errno = ENOENT)
+# Loading work.lvds
+# ** Error: (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# 
+# No such file or directory. (errno = ENOENT)
+# Loading work.lvds_0002
+# ** Error: (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# 
+# No such file or directory. (errno = ENOENT)
+# Loading work.lvds_0002_lvds_ddio_in_7td
+add wave -position insertpoint  \
+sim:/lvds_top/clk \
+sim:/lvds_top/rstn \
+sim:/lvds_top/data \
+sim:/lvds_top/data_w \
+sim:/lvds_top/data_d
+run
+# Compile of lvds.v was successful.
+# Compile of lvds_top.v was successful.
+# Compile of lvds_0002.v was successful.
+# 3 compiles, 0 failed with no errors.
+vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps work.lvds_top
+# vsim 
+# Start time: 16:10:32 on Aug 18,2017
+# Loading work.lvds_top
+# ** Error: (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# 
+# No such file or directory. (errno = ENOENT)
+# Loading work.lvds
+# ** Error: (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# 
+# No such file or directory. (errno = ENOENT)
+# Loading work.lvds_0002
+# ** Error: (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# 
+# No such file or directory. (errno = ENOENT)
+# Loading work.lvds_0002_lvds_ddio_in_7td
+add wave -position insertpoint  \
+sim:/lvds_top/clk \
+sim:/lvds_top/rstn \
+sim:/lvds_top/data \
+sim:/lvds_top/data_w \
+sim:/lvds_top/data_d
+run
+# Compile of lvds.v was successful.
+# Compile of lvds_top.v was successful.
+# Compile of lvds_0002.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.lvds_top
+# ** Error: (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# 
+# No such file or directory. (errno = ENOENT)
+# Loading work.lvds
+# ** Error: (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# 
+# No such file or directory. (errno = ENOENT)
+# Loading work.lvds_0002
+# ** Error: (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# 
+# No such file or directory. (errno = ENOENT)
+# Loading work.lvds_0002_lvds_ddio_in_7td
+run
+# GetModuleFileName: 找不到指定的模块。
+# 
+# 
+add wave  \
+sim:/lvds_top/i
+restart
+# ** Error: (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# 
+# No such file or directory. (errno = ENOENT)
+run
+# GetModuleFileName: 找不到指定的模块。
+# 
+# 
+restart
+# ** Error: (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# 
+# No such file or directory. (errno = ENOENT)
+restart
+# ** Error: (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# 
+# No such file or directory. (errno = ENOENT)
+# Compile of lvds.v was successful.
+# Compile of lvds_top.v was successful.
+# Compile of lvds_0002.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.lvds_top
+# ** Error: (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# 
+# No such file or directory. (errno = ENOENT)
+# Loading work.lvds
+# ** Error: (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# 
+# No such file or directory. (errno = ENOENT)
+# Loading work.lvds_0002
+# ** Error: (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# 
+# No such file or directory. (errno = ENOENT)
+# Loading work.lvds_0002_lvds_ddio_in_7td
+run
+# GetModuleFileName: 找不到指定的模块。
+# 
+# 
+# Compile of lvds.v was successful.
+# Compile of lvds_top.v was successful.
+# Compile of lvds_0002.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.lvds_top
+# ** Error: (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# 
+# No such file or directory. (errno = ENOENT)
+# Loading work.lvds
+# ** Error: (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# 
+# No such file or directory. (errno = ENOENT)
+# Loading work.lvds_0002
+# ** Error: (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# 
+# No such file or directory. (errno = ENOENT)
+# Loading work.lvds_0002_lvds_ddio_in_7td
+run
+# GetModuleFileName: 找不到指定的模块。
+# 
+# 
+# Compile of lvds.v was successful.
+# Compile of lvds_top.v was successful.
+# Compile of lvds_0002.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.lvds_top
+# ** Error: (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# 
+# No such file or directory. (errno = ENOENT)
+# Loading work.lvds
+# ** Error: (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# 
+# No such file or directory. (errno = ENOENT)
+# Loading work.lvds_0002
+# ** Error: (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# 
+# No such file or directory. (errno = ENOENT)
+# Loading work.lvds_0002_lvds_ddio_in_7td
+run
+# GetModuleFileName: 找不到指定的模块。
+# 
+# 
+# Compile of lvds.v was successful.
+# Compile of lvds_top.v failed with 2 errors.
+# Compile of lvds_0002.v was successful.
+# 3 compiles, 1 failed with 2 errors.
+# Compile of lvds.v was successful.
+# Compile of lvds_top.v failed with 1 errors.
+# Compile of lvds_0002.v was successful.
+# 3 compiles, 1 failed with 1 error.
+# Compile of lvds.v was successful.
+# Compile of lvds_top.v was successful.
+# Compile of lvds_0002.v was successful.
+# 3 compiles, 0 failed with no errors.
+vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps work.lvds_top
+# vsim 
+# Start time: 16:47:51 on Aug 18,2017
+# Loading work.lvds_top
+# ** Error: (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# 
+# No such file or directory. (errno = ENOENT)
+# Loading work.lvds
+# ** Error: (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# 
+# No such file or directory. (errno = ENOENT)
+# Loading work.lvds_0002
+# ** Error: (vsim-19) Failed to access library 'rtl_work' at "rtl_work".
+# 
+# No such file or directory. (errno = ENOENT)
+# Loading work.lvds_0002_lvds_ddio_in_7td
+add wave -position insertpoint  \
+sim:/lvds_top/clk \
+sim:/lvds_top/rstn \
+sim:/lvds_top/data \
+sim:/lvds_top/data_w \
+sim:/lvds_top/data_d \
+sim:/lvds_top/i \
+sim:/lvds_top/lane0 \
+sim:/lvds_top/lane1 \
+sim:/lvds_top/lane2 \
+sim:/lvds_top/lane3
+run
+# End time: 10:24:07 on Aug 19,2017, Elapsed time: 17:36:16
+# Errors: 3, Warnings: 0
