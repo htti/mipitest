@@ -360,4 +360,5 @@ set_global_assignment -name SIGNALTAP_FILE stp3.stp
 set_global_assignment -name SIGNALTAP_FILE stp4.stp
 set_global_assignment -name SIGNALTAP_FILE stp5.stp
 set_global_assignment -name VERILOG_FILE lane_byte_align.v
+set_global_assignment -name VERILOG_FILE bit_slip_v.v
 set_global_assignment -name SLD_FILE db/stp5_auto_stripped.stp
