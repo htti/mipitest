@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(10M50DAF484ES) Path("E:/decatest/test/mymipi/") File("mymipi.sof") MfrSpec(OpMask(1));
+		Device PartName(10M50DAF484ES) Path("G:/test/max10mipi/mipitest/max10mipi/") File("mymipi.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

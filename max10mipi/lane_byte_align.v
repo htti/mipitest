@@ -129,11 +129,18 @@ always @(posedge clk or negedge rstn)
 			lane_curr_byte <= lane_byte;
 			lane_last_byte <= lane_curr_byte;
 			end
-
+bit_slip_v bit_slip_v_inst(.curr_byte(lane_curr_byte),
+									.last_byte(lane_last_byte),
+									.found_hdr(),
+									.hdr_offs(),
+									.actual_byte());
+/*
 bit_slip bit_slip_inst( .curr_byte(lane_curr_byte),
 								.last_byte(lane_last_byte),
 								.found_hdr(hdr_found),
 								.hdr_offs(hdr_offset));
+*/
+
 /*			
 reg [2:0] i;
 reg offset_found;
@@ -283,6 +290,7 @@ always @(lane_curr_byte,lane_last_byte)
 			end
 	 end
 */
+/*
 reg [2:0] data_offs;
 reg hdr_found_r;
 always @(posedge clk or negedge rstn)
@@ -321,5 +329,6 @@ always @(posedge clk or negedge rstn)
 		byte <= 0;
 		end
 	else byte <= shifted_byte;
+*/
 endmodule
 		
