@@ -18,19 +18,12 @@ module mipi_decode(
 						);
 wire [7:0] data8;
 lvds lvds_inst(
-		.rx_inclock(rx_inclk),  	//  rx_inclock.rx_inclock
-		.rx_in(rx_in),       		//  rx_in.rx_in
-		.rx_out(data8),     		 	//  rx_out.rx_out
-		.rx_outclock(data_clk), 	//  rx_outclock.rx_outclock
-		.rx_locked()    				//  x_locked.rx_locked
+		.rx_inclock(rx_inclk),  	
+		.rx_in(rx_in),       	 
+		.rx_out(data8),     		  
+		.rx_outclock(data_clk), 	 
+		.rx_locked()    				 
 	);
-	
-//word align
-//reg [1:0] lane0_r0,lane0_r1,lane0_r2,lane0_r3;
-//reg [1:0] lane1_r0,lane1_r1,lane1_r2,lane1_r3;
-//reg [1:0] lane2_r0,lane2_r1,lane2_r2,lane2_r3;
-//reg [1:0] lane3_r0,lane3_r1,lane3_r2,lane3_r3;
-
 //reg [7:0] lane0,lane1,lane2,lane3;
 always @(posedge data_clk or negedge rstn)
 	if(!rstn)
@@ -61,7 +54,11 @@ always @(posedge data_clk or negedge rstn)
 			lane3[3:2] <= lane3[5:4];
 			lane3[1:0] <= lane3[3:2];
 			end
-			
+wire [7:0] lane0_byte,lane1_byte,lane2_byte,lane3_byte;
+wire       lane0_byte_gate,lane1_byte_gate,lane2_byte_gate,lane3_byte_gate;
+wire       lane0_found_sot,lane1_found_sot,lane2_found_sot,lane3_found_sot;
+wire       lane0_hs_mode,lane1_hs_mode,lane2_hs_mode,lane3_hs_mode;	
+wire [2:0] lane0_data_offs,lane1_data_offs,lane2_data_offs,lane3_data_offs;		
 lane_byte_align lane0_byte_align(.clk(data_clk),
 											.rstn(rstn),
 							  
@@ -69,9 +66,11 @@ lane_byte_align lane0_byte_align(.clk(data_clk),
 											.lp_md_n(lp_md_n[0]),
 											.ddr_data(data8[1:0]),
 							  
-											.byte_en(),
-											.byte(),
-											.hs_mode());
+											.byte_gate(lane0_byte_gate),
+											.mipi_byte(lane0_byte),
+											.found_sot(lane0_found_sot),
+											.data_offs(lane0_data_offs),
+											.hs_mode(lane0_hs_mode));
 											
 lane_byte_align lane1_byte_align(.clk(data_clk),
 											.rstn(rstn),
@@ -80,9 +79,11 @@ lane_byte_align lane1_byte_align(.clk(data_clk),
 											.lp_md_n(lp_md_n[1]),
 											.ddr_data(data8[3:2]),
 							  
-											.byte_en(),
-											.byte(),
-											.hs_mode());
+											.byte_gate(lane1_byte_gate),
+											.mipi_byte(lane1_byte),
+											.found_sot(lane1_found_sot),
+											.data_offs(lane1_data_offs),
+											.hs_mode(lane1_hs_mode));
 											
 lane_byte_align lane2_byte_align(.clk(data_clk),
 											.rstn(rstn),
@@ -91,9 +92,11 @@ lane_byte_align lane2_byte_align(.clk(data_clk),
 											.lp_md_n(lp_md_n[2]),
 											.ddr_data(data8[5:4]),
 							  
-											.byte_en(),
-											.byte(),
-											.hs_mode());
+											.byte_gate(lane2_byte_gate),
+											.mipi_byte(lane2_byte),
+											.found_sot(lane2_found_sot),
+											.data_offs(lane2_data_offs),
+											.hs_mode(lane2_hs_mode));
 											
 lane_byte_align lane3_byte_align(.clk(data_clk),
 											.rstn(rstn),
@@ -102,99 +105,22 @@ lane_byte_align lane3_byte_align(.clk(data_clk),
 											.lp_md_n(lp_md_n[3]),
 											.ddr_data(data8[7:6]),
 							  
-											.byte_en(),
-											.byte(),
-											.hs_mode());
+											.byte_gate(lane3_byte_gate),
+											.mipi_byte(lane3_byte),
+											.found_sot(lane3_found_sot),
+											.data_offs(lane3_data_offs),
+											.hs_mode(lane3_hs_mode));
 
-/*
-reg [2:0] cnt;
-always @(posedge data_clk or negedge rstn)
-	if(!rstn)
-		begin
-		cnt <= 0;
-		end
-	else if(cnt == 3'd3)
-			cnt <= 0;
-	else cnt <= cnt + 1'b1;
-	
-reg [7:0] lane0_curr_byte,lane0_last_byte;
-reg [7:0] lane1_curr_byte,lane1_last_byte;
-reg [7:0] lane2_curr_byte,lane2_last_byte;
-reg [7:0] lane3_curr_byte,lane3_last_byte;
+data_resolve data_resolve_inst( 	.clk(data_clk),
+											.rstn(rstn),
+											.byte_gate({lane3_byte_gate,lane2_byte_gate,lane1_byte_gate,lane0_byte_gate}),
+											.found_sot({lane3_found_sot,lane2_found_sot,lane1_found_sot,lane0_found_sot}),
+											.hs_mode({lane3_hs_mode,lane2_hs_mode,lane1_hs_mode,lane0_hs_mode}),
+											.data_offs({lane3_data_offs,lane2_data_offs,lane1_data_offs,lane0_data_offs}),
+											.data({lane3_byte,lane2_byte,lane1_byte,lane0_byte}),
+							
+											.byte_read(),
+											.package_valid());			
 
-always @(posedge data_clk or negedge rstn)
-	if(!rstn)
-		begin
-		lane0_curr_byte
-		end
-*/
-reg [1:0] LP_state;
-always @(posedge lp_mc_p or negedge rstn)
-	if(!rstn)
-		begin
-		LP_state <= 0;
-		end
-	else case(LP_state)
-			2'd0: begin
-					if(lp_md_p & lp_md_n) //11
-						LP_state <= 2'd1;
-					else LP_state <= 2'd0;
-					end
-			2'd1: begin
-					if(!lp_md_p & lp_md_n) //01
-						LP_state <= 2'd2;
-					else LP_state <= 2'd1;
-					end
-			2'd2: begin
-					if(!lp_md_p & !lp_md_n)
-						LP_state <= 2'd3;
-					else LP_state <= 2'd2;
-					end
-			2'd3: begin
-					
-					end
-			default:;
-			endcase
 
-//always @(posedge data_clk or negedge rstn)
-//	if()
-	
-
-//always @(posedge data_clk)
-/*
-wire [7:0] data0,data1,data2,dat3;
-wire data_clk0,data_clk1,data_clk2,data_clk3;
-lvds lvds_inst0(
-		.rx_inclock(rx_inclk),  //  rx_inclock.rx_inclock
-		.rx_in(rx_in),       //       rx_in.rx_in
-		.rx_out(data0),      //      rx_out.rx_out
-		.rx_outclock(data_clk0), // rx_outclock.rx_outclock
-		.rx_locked()    //   rx_locked.rx_locked
-	);
-
-lvds lvds_inst1(
-		.rx_inclock(rx_inclk),  //  rx_inclock.rx_inclock
-		.rx_in(rx_in[1]),       //       rx_in.rx_in
-		.rx_out(data1),      //      rx_out.rx_out
-		.rx_outclock(data_clk1), // rx_outclock.rx_outclock
-		.rx_locked()    //   rx_locked.rx_locked
-	);
-	
-lvds lvds_inst2(
-		.rx_inclock(rx_inclk),  //  rx_inclock.rx_inclock
-		.rx_in(rx_in[2]),       //       rx_in.rx_in
-		.rx_out(data2),      //      rx_out.rx_out
-		.rx_outclock(data_clk2), // rx_outclock.rx_outclock
-		.rx_locked()    //   rx_locked.rx_locked
-	);
-
-lvds lvds_inst3(
-		.rx_inclock(rx_inclk),  //  rx_inclock.rx_inclock
-		.rx_in(rx_in[3]),       //       rx_in.rx_in
-		.rx_out(data3),      //      rx_out.rx_out
-		.rx_outclock(data_clk3), // rx_outclock.rx_outclock
-		.rx_locked()    //   rx_locked.rx_locked
-	);
-*/	
-	
 endmodule 
